@@ -27,28 +27,28 @@ res_monthly_trend_san9=readRDS("data/res_monthly_trend_san9.rds"))
 periods=c("DJF","MAM","JJA","SON","YEAR",paste0("MONTH_",1:12))
 
 ####################################################################################################
-
 res_sd=data.frame(t(1:length(periods)))
-res[1:9,]=NA
+res_sd[1:9,]=NA
 
 res_z=data.frame(t(1:length(periods)))
-res[1:9,]=NA
+res_z[1:9,]=NA
 
 res_pvalue=data.frame(t(1:length(periods)))
-res[1:9,]=NA
+res_pvalue[1:9,]=NA
 
 res_sen=data.frame(t(1:length(periods)))
-res[1:9,]=NA
+res_sen[1:9,]=NA
 
 res_I=data.frame(t(1:length(periods)))
-res[1:9,]=NA
+res_I[1:9,]=NA
 
 res_pen=data.frame(t(1:length(periods)))
-res[1:9,]=NA
+res_pen[1:9,]=NA
+
 
 ######################################################
 
-for ( j in 1:4) {
+for ( j in 1:5) {
 for ( i in 1:9)
   {
    
@@ -95,26 +95,27 @@ XLConnect::writeWorksheetToFile("results_trend_SAN9.xls",data=res_pen,"Pendenza_
 #######################################################################################################
 
 res_sd=data.frame(t(1:length(periods)))
-res[1:9,]=NA
+res_sd[1:9,]=NA
 
 res_z=data.frame(t(1:length(periods)))
-res[1:9,]=NA
+res_z[1:9,]=NA
 
 res_pvalue=data.frame(t(1:length(periods)))
-res[1:9,]=NA
+res_pvalue[1:9,]=NA
 
 res_sen=data.frame(t(1:length(periods)))
-res[1:9,]=NA
+res_sen[1:9,]=NA
 
 res_I=data.frame(t(1:length(periods)))
-res[1:9,]=NA
+res_I[1:9,]=NA
 
 res_pen=data.frame(t(1:length(periods)))
-res[1:9,]=NA
+res_pen[1:9,]=NA
+
 
 ######################################################
 
-for ( j in 1:4) {
+for ( j in 1:5) {
   for ( i in 1:9)
   {
     
