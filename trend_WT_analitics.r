@@ -121,7 +121,7 @@ saveRDS(san9_yearly_trend,"san9_yearly_trend.rds")
 
 
 
-pct9_DJF_trend=analize_year_trend(mat_data_79_15_season_f_pct9[[1]])
+pct9_DJF_trend=analize_year_trend(mat_data_79_15_season_f_pct9[[1]][2:37,],ystart = 1980)
 pct9_MAM_trend=analize_year_trend(mat_data_79_15_season_f_pct9[[2]])
 pct9_JJA_trend=analize_year_trend(mat_data_79_15_season_f_pct9[[3]])
 pct9_SON_trend=analize_year_trend(mat_data_79_15_season_f_pct9[[4]])
@@ -132,7 +132,7 @@ saveRDS(pct9_MAM_trend,"pct9_MAM_trend.rds")
 saveRDS(pct9_JJA_trend,"pct9_JJA_trend.rds")
 saveRDS(pct9_SON_trend,"pct9_SON_trend.rds")
 
-san9_DJF_trend=analize_year_trend(mat_data_79_15_season_f_san9[[1]])
+san9_DJF_trend=analize_year_trend(mat_data_79_15_season_f_san9[[1]][2:37,],ystart = 1980))
 san9_MAM_trend=analize_year_trend(mat_data_79_15_season_f_san9[[2]])
 san9_JJA_trend=analize_year_trend(mat_data_79_15_season_f_san9[[3]])
 san9_SON_trend=analize_year_trend(mat_data_79_15_season_f_san9[[4]])
@@ -290,7 +290,7 @@ XLConnect::writeWorksheetToFile("data_xls/Year_freq.xls",data=temp,"freq_SAN9")
 
 #########################################################################################
 
-temp=data.frame(year=1979:2015,mat_data_79_15_season_f_pct9[[1]][1:37,])
+temp=data.frame(year=1980:2015,mat_data_79_15_season_f_pct9[[1]][2:37,])
 names(temp)=names_WT
 XLConnect::writeWorksheetToFile("data_xls/Season_freq.xls",data=temp,"DJF_freq_PCT9")
 temp=data.frame(year=1979:2015,mat_data_79_15_season_f_pct9[[2]])
@@ -298,12 +298,12 @@ names(temp)=names_WT
 XLConnect::writeWorksheetToFile("data_xls/Season_freq.xls",data=temp,"MAM_freq_PCT9")
 temp=data.frame(year=1979:2015,mat_data_79_15_season_f_pct9[[3]])
 names(temp)=names_WT
-XLConnect::writeWorksheetToFile("Season_freq_PCT9.xls",data=temp,"JJA_freq_PCT9")
+XLConnect::writeWorksheetToFile("data_xls/Season_freq.xls",data=temp,"JJA_freq_PCT9")
 temp=data.frame(year=1979:2015,mat_data_79_15_season_f_pct9[[4]])
 names(temp)=names_WT
 XLConnect::writeWorksheetToFile("data_xls/Season_freq.xls",data=temp,"SON_freq_PCT9")
 
-temp=data.frame(year=1979:2015,mat_data_79_15_season_f_san9[[1]][1:37,])
+temp=data.frame(year=1980:2015,mat_data_79_15_season_f_san9[[1]][2:37,])
 names(temp)=names_WT
 XLConnect::writeWorksheetToFile("data_xls/Season_freq.xls",data=temp,"DJF_freq_SAN9")
 temp=data.frame(year=1979:2015,mat_data_79_15_season_f_san9[[2]])
