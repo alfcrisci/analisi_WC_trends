@@ -71,6 +71,8 @@ mat_data_79_15_season_f_san9[[2]]=do.call("rbind",lapply(mat_data_79_15_season_M
 mat_data_79_15_season_f_san9[[3]]=do.call("rbind",lapply(mat_data_79_15_season_JJA,freqsWTsan))
 mat_data_79_15_season_f_san9[[4]]=do.call("rbind",lapply(mat_data_79_15_season_SON,freqsWTsan))
 
+meselist=c(1,5,6,7,8,9,10,11,12,2,3,4)
+mat_data_79_15_month=mat_data_79_15_month[meselist]
 
 for ( i in 1:12) {
   
@@ -132,7 +134,7 @@ saveRDS(pct9_MAM_trend,"pct9_MAM_trend.rds")
 saveRDS(pct9_JJA_trend,"pct9_JJA_trend.rds")
 saveRDS(pct9_SON_trend,"pct9_SON_trend.rds")
 
-san9_DJF_trend=analize_year_trend(mat_data_79_15_season_f_san9[[1]][2:37,],ystart = 1980))
+san9_DJF_trend=analize_year_trend(mat_data_79_15_season_f_san9[[1]][2:37,],ystart = 1980)
 san9_MAM_trend=analize_year_trend(mat_data_79_15_season_f_san9[[2]])
 san9_JJA_trend=analize_year_trend(mat_data_79_15_season_f_san9[[3]])
 san9_SON_trend=analize_year_trend(mat_data_79_15_season_f_san9[[4]])
